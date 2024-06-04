@@ -1,0 +1,11 @@
+Package: MorphoTreat
+Type: Package
+Title: Morphology-Based Treatment Identification
+Version: 0.0.1
+Author: Sompob Saralamba
+Maintainer: Sompob Saralamba <saralamba@gmail.com>
+Description: Developing Standard Criteria and Applications for Identifying Antimalarial Drug Treatments Based on the Blood Stage Morphology of P. falciparum
+Imports:
+License: GNU 3
+Encoding: UTF-8
+LazyData: true
