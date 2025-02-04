@@ -2,7 +2,6 @@
 % Please edit documentation in R/MorphoTreat_PACKAGE.R
 \docType{package}
 \name{MorphoTreat}
-\alias{MorphoTreat-package}
 \alias{MorphoTreat}
 \title{MorphoTreat}
 \description{
