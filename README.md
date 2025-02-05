@@ -2,10 +2,8 @@
 
 ### Morphology-Based Treatment Identification
 
-**MorphoTreat** is an R package for identifying antimalarial drug
-treatments based on the blood stage morphology of *P. falciparum*.\
-It uses **YOLO Object Detection** to analyze input images and predict
-the presence of malaria stages.
+**MorphoTreat** is an R package for identifying antimalarial drug treatments based on the blood stage morphology of *P. falciparum*.\
+It uses **YOLO Object Detection** to analyze input images and predict the presence of malaria stages.
 
 ![](inst/pics/rbcyolo.gif)
 
@@ -13,22 +11,24 @@ the presence of malaria stages.
 
 ## **📌 Prerequisites**
 
-Since **MorphoTreat** relies on **YOLO CLI**, you need to install
-`ultralytics` and ensure YOLO CLI is accessible.
+Since **MorphoTreat** relies on **YOLO CLI**, you need to install `ultralytics` and ensure YOLO CLI is accessible.
 
 Please follow this link for detailed installation instructions.
 
-🔗 [Official YOLO Installation
-Guide](https://docs.ultralytics.com/quickstart/)
+🔗 [Official YOLO Installation Guide](https://docs.ultralytics.com/quickstart/)
 
 ## **🔹 Installation**
 
 ### **1. Install from Source**
 
-You can install **MorphoTreat** from your local repository:
+You can install **MorphoTreat** from your GitHub repository:
 
 ``` r
 devtools::install_github("slphyx/MorphoTreat")
+```
+
+``` r
+remotes::install_github("slphyx/MorphoTreat")
 ```
 
 or if you have the package built as a `.tar.gz` file:
@@ -49,8 +49,7 @@ library(MorphoTreat)
 
 ### **MorphoPredict()**
 
-Performs YOLO-based detection on an input image and **displays the
-result immediately**.
+Performs YOLO-based detection on an input image and **displays the result immediately**.
 
 **Usage:**
 
