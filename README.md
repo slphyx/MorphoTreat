@@ -5,8 +5,6 @@
 **MorphoTreat** is an R package for identifying antimalarial drug treatments based on the blood stage morphology of *P. falciparum*.\
 It uses **YOLO Object Detection** to analyze input images and predict the presence of malaria stages.
 
-![](inst/pics/rbcyolo.gif)
-
 ------------------------------------------------------------------------
 
 ## **📌 Prerequisites**
@@ -26,6 +24,8 @@ You can install **MorphoTreat** from your GitHub repository:
 ``` r
 devtools::install_github("slphyx/MorphoTreat")
 ```
+
+or
 
 ``` r
 remotes::install_github("slphyx/MorphoTreat")
