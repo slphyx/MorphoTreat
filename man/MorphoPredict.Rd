@@ -4,7 +4,7 @@
 \alias{MorphoPredict}
 \title{MorphoPredict}
 \usage{
-MorphoPredict(img.path, yolo.opts = NULL)
+MorphoPredict(img.path, yolo.opts = NULL, show.image = TRUE)
 }
 \arguments{
 \item{img.path}{Absoulte path to an input image file.}

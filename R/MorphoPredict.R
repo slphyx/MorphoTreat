@@ -12,11 +12,12 @@
 #' @examples
 #' MorphoPredict(img.path = "d:/data/images/my_slides.jpg)
 #' 
-MorphoPredict <- function(img.path, yolo.opts=NULL){
+MorphoPredict <- function(img.path, yolo.opts=NULL, show.image=TRUE){
   message("==== MorphoTreat ==== \nby slphyx@outlook.com\n=====================\n")
   
   temp_output <- file.path(tempdir(), "yolo_output")
   result_folder <- file.path(temp_output, "result")
+  label_folder <- file.path(result_folder, "labels")
   
   dir.create(result_folder, showWarnings = FALSE, recursive = TRUE)
   
@@ -30,7 +31,9 @@ MorphoPredict <- function(img.path, yolo.opts=NULL){
     paste0("project=", shQuote(temp_output)),
     paste0("name=result"),
     "exist_ok=True",
-    "save=True"
+    "save=True",
+    "save_txt=True",
+    "save_conf=True"
   )
   
   message("running command: ",cmd)
@@ -38,13 +41,17 @@ MorphoPredict <- function(img.path, yolo.opts=NULL){
   system(cmd)
   
   result_img <- file.path(result_folder, basename(img.path))
+  label_file <- file.path(label_folder, paste0(tools::file_path_sans_ext(basename(img.path)), ".txt"))
   
   if (!file.exists(result_img)) {
     stop("Error: YOLO did not generate output image.")
   }
   
-  ShowPredict(img.name = basename(img.path), output.path = result_folder)
+  if (show.image) {
+    ShowPredict(img.name = basename(img.path), output.path = result_folder)
+  }
+  
+  df <- read_yolo_labels(label_file)
+  return(df)
   
 }
-
-
