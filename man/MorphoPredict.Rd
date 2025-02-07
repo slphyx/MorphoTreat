@@ -10,9 +10,30 @@ MorphoPredict(img.path, yolo.opts = NULL, show.image = TRUE)
 \item{img.path}{Absoulte path to an input image file.}
 
 \item{yolo.opts}{Additional YOLO CLI options (optional).}
+
+\item{show.image}{Logical value indicating whether to display the predicted image. If set to FALSE,
+the image will not be displayed. Default is TRUE.}
+}
+\value{
+A data frame containing detection results, with columns such as \code{class}, \code{x_center},
+  \code{y_center}, \code{width}, \code{height}, and \code{confidence}.
 }
 \description{
 MorphoPredict is the primary command of this package. It utilizes a trained model to 
  predict whether an input image contains the following stages: 
  AST, QN, Rings, Trophs, and Schizs.
+}
+\details{
+This function calls the YOLO CLI via a system command and requires that the YOLO CLI is
+installed and accessible in the system path. It depends on a global variable \code{PATH2Model}, which is
+initialised in the package's \code{.onLoad} function (located in the util file) to point to the model file.
+The package also utilises the \code{magick} package for image reading and plotting.
+}
+\examples{
+# Example with image display (default):
+MorphoPredict(img.path = "inst/pics/malaria_sample.png")
+
+# Example without image display:
+MorphoPredict(img.path = "inst/pics/malaria_sample.png", show.image = FALSE)
+
 }

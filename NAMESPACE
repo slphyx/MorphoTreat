@@ -1,3 +1,4 @@
 #exportPattern("^[[:alpha:]]+")
 importFrom("magick", "image_read")
+importFrom("utils", "read.table")
 export("MorphoPredict")
