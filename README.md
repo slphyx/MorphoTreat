@@ -1,5 +1,9 @@
 # MorphoTreat
 
+[![GitHub release](https://img.shields.io/github/v/release/slphyx/MorphoTreat)](https://github.com/slphyx/MorphoTreat/releases) 
+[![Top Langs](https://img.shields.io/github/languages/top/slphyx/MorphoTreat)](https://github.com/slphyx/MorphoTreat) 
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+
 ### Morphology-Based Treatment Identification
 
 **MorphoTreat** is an R package for identifying antimalarial drug treatments based on the blood stage morphology of *Plasmodium falciparum*. It leverages **YOLO Object Detection** to analyze input images and predict the presence of malaria stages including AST, QN, Rings, Trophs, and Schizs.
@@ -64,6 +68,9 @@ This command will:
 
 -   **Return Detection Data:** A data frame containing details (class, x_center, y_center, width, height, confidence) for each detected object.
 
+![](inst/pics/Example.png) 
+![](inst/pics/result.png)
+
 #### Disabling Image Display
 
 If you prefer not to display the image and only need the detection results, you can disable the image display by setting `show.image` to `FALSE`:
@@ -73,7 +80,5 @@ MorphoPredict(img.path = "inst/pics/malaria_sample.png", show.image = FALSE)
 ```
 
 Using this option, the function will simply return the data frame with the detection results without plotting the image.
-
-![](inst/pics/Example.png)
 
 ------------------------------------------------------------------------
