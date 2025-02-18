@@ -8,6 +8,10 @@
 
 **MorphoTreat** is an R package for identifying antimalarial drug treatments based on the blood stage morphology of *Plasmodium falciparum*. It leverages **YOLO Object Detection** to analyze input images and predict the presence of malaria stages including AST, QN, Rings, Trophs, and Schizs.
 
+**Online Version:**\
+In addition to the R package, an online version called **Parasight** is available.\
+You can access and use it at <https://parasight.vercel.app/>.
+
 ------------------------------------------------------------------------
 
 ## 📌 Prerequisites
